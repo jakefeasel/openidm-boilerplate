@@ -1,0 +1,5 @@
+.project
+.vagrant
+.DS_Store
+node_modules
+target

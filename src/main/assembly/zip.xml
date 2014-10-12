@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>bin</id>
+    <baseDirectory>/</baseDirectory>
+    <formats>
+        <format>dir</format>
+    </formats>
+    <fileSets>
+
+        <!-- This block needs adjustment for your project, so that only 
+             the specific files you want to include from the default openidm 
+             configuration are included in your project -->
+        <fileSet>
+            <directory>${project.build.directory}/idm-staging/openidm</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>conf/**</include>
+                <include>bin/**</include>
+                <include>bundle/**</include>
+                <include>legal-notices/*</include>
+                <include>logs/*</include>
+                <include>security/*</include>
+                <include>ui/*</include>
+            </includes>
+            <excludes>
+                <!--
+                    Exclude all of the default configuration files that you don't want
+                    to use in your project
+                -->
+                <!--exclude>conf/endpoint-*.json</exclude>
+                <exclude>conf/ui*.json</exclude>
+                <exclude>conf/workflow.json</exclude>
+                <exclude>conf/process-access.json</exclude-->
+
+
+                <!-- I suggest removing the OrientDB repo and using a JDBC repo (such as PostgreSQL) instead -->
+                <exclude>conf/repo.orientdb.json</exclude>
+            </excludes>
+        </fileSet>
+
+
+
+        <!-- You shouldn't need to modify these next three, unless you have some very specialized needs -->
+        <fileSet>
+            <directory>${basedir}/src/main/resources</directory>
+            <outputDirectory>/</outputDirectory>
+            <fileMode>0640</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/idm-staging/openidm</directory>
+            <outputDirectory>/</outputDirectory>
+            <fileMode>750</fileMode>
+            <includes>
+                <include>startup.sh</include>
+                <include>startup.bat</include>
+                <include>shutdown.sh</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/idm-staging/openidm/security</directory>
+            <outputDirectory>/security</outputDirectory>
+            <directoryMode>0700</directoryMode>
+            <fileMode>0600</fileMode>
+        </fileSet>
+
+    </fileSets>
+
+
+    <dependencySets>
+
+        <!-- This will place any dependencies you have declared into the /bundle directory by default. 
+            Be sure to update the list of excludes for anything you don't want placed in there. -->
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <outputDirectory>/bundle</outputDirectory>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <!--<useTransitiveFiltering>true</useTransitiveFiltering>-->
+            <excludes>
+                <exclude>org.forgerock.openidm:openidm-zip</exclude>
+                <exclude>org.forgerock.openidm:openidm-ui-enduser</exclude>
+                <exclude>org.forgerock.openicf.connectors*</exclude>
+            </excludes>
+        </dependencySet>
+
+        <!-- The location for each non-bundle dependency will need to be specified, as below.
+             In this example, we are unpacking any OpenICF connectors we have as a dependency 
+             into the /connectors folder.
+         -->
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <outputDirectory>/connectors</outputDirectory>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <!--<useTransitiveFiltering>true</useTransitiveFiltering>-->
+            <includes>
+                <include>org.forgerock.openicf.connectors*</include>
+            </includes>
+        </dependencySet>
+
+
+
+    </dependencySets>
+</assembly>
