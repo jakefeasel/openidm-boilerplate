@@ -22,6 +22,10 @@
                 <include>logs/*</include>
                 <include>security/*</include>
                 <include>ui/*</include>
+
+                <!-- The below line includes all of the default connectors shipped 
+                    with OpenIDM. Remove this line if you want a different set. -->
+                <include>connectors/*</include>
             </includes>
             <excludes>
                 <!--
