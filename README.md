@@ -11,7 +11,9 @@ OpenIDM Custom Project Boilerplate
 * project-specific dependencies such as database drivers or libraries for connectors
 * user interface changes
 
-Making these customizations is the job of an OpenIDM "Integrator". Normally, Integrators learn about making these changes by reading the [OpenIDM Integrator's Guide](http://openidm.forgerock.org/doc/integrators-guide/index.html). This project boilerplate aims to assist the Integrator by providing a reusable structure to manage the full lifecycle of development for these customizations. With this project boilerplate, the Integrator can treat these project customizations like any other source code - tracked in a working copy, able to be shared with their fellow Integrators, tested by a QA department (or a customer), and eventually deployed to production. With this boilerplate it is expected that Integrators will find the creation of OpenIDM projects much simpler to manage.
+Making these customizations is the job of an OpenIDM "Integrator". Normally, Integrators learn about making these changes by reading the [OpenIDM Integrator's Guide](http://openidm.forgerock.org/doc/integrators-guide/index.html). This project boilerplate aims to assist the Integrator by providing a reusable structure to manage the full lifecycle of development for these customizations. 
+
+With this project boilerplate, the Integrator can treat these project customizations like any other source code - tracked in a working copy, able to be shared with their fellow Integrators for collaboration, tested by a QA department (or a customer), and eventually deployed to production. With this boilerplate it is expected that Integrators will find OpenIDM projects much simpler to create, develop and distribute.
 
 ##Requirements
 
