@@ -15,7 +15,7 @@ Making these customizations is the job of an OpenIDM "Integrator". Normally, Int
 
 ##Requirements
 
-The only fixed requirement necessary to use this boilerplate is [Vagrant](http://www.vagrantup.com/). By default, Vagrant is configured to use [VirtualBox](https://www.virtualbox.org/) as the virtual machine provider; unless you really want to use a different provider, you should have that installed as well (check [Vagrant](http://www.vagrantup.com/) for more details on using others).
+The only fixed requirement necessary to use this boilerplate is [Vagrant](http://www.vagrantup.com/). By default, Vagrant is configured to use [VirtualBox](https://www.virtualbox.org/) as the virtual machine provider; unless you really want to use a different provider, you should have that installed as well (check the [Vagrant Docs](http://docs.vagrantup.com/v2/providers/index.html) for more details on using others).
 
 To get the most value out of this boilerplate, you should check it into a source code manager such as git or subversion. This way you can track your project customizations just like you would track any other development project. Git will probably work the best, as I have already prepped the .gitignore as you would need.
 
