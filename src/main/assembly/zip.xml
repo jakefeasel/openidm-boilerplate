@@ -21,7 +21,11 @@
                 <include>legal-notices/*</include>
                 <include>logs/*</include>
                 <include>security/*</include>
-                <include>ui/*</include>
+
+                <!--
+                    If you want to use the default UI, keep the below line. Otherwise, remove it.
+                 -->
+                <include>ui/**</include>
 
                 <!-- The below line includes all of the default connectors shipped 
                     with OpenIDM. Remove this line if you want a different set. -->
