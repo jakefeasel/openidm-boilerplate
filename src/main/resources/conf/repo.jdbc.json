@@ -102,6 +102,11 @@
                 "mainTable" : "clusterobjects",
                 "propertiesTable" : "clusterobjectproperties",
                 "searchableDefault" : false
+            },
+            "config" : {
+                "mainTable" : "configobjects",
+                "propertiesTable" : "configobjectproperties",
+                "searchableDefault" : false
             }
         },
         "explicitMapping" : {
