@@ -3,9 +3,6 @@
 export OPENIDM_OPTS="-Xms128m -Xmx256m"
 
 echo "192.168.50.4 OPENIDM_REPO_HOST" >> /etc/hosts
-echo "192.168.50.4 SQLFIDDLE_HOST" >> /etc/hosts
-echo "192.168.50.4 POSTGRESQL93_HOST" >> /etc/hosts
-echo "192.168.50.5 MYSQL56_HOST" >> /etc/hosts
 
 echo "export OPENIDM_OPTS=\"${OPENIDM_OPTS}\"" >> /etc/profile
 
