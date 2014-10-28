@@ -11,7 +11,6 @@ echo "export OPENIDM_OPTS=\"${OPENIDM_OPTS}\"" >> /etc/profile
 
 #apt-get --yes --force-yes install python-software-properties
 #add-apt-repository --yes ppa:webupd8team/java
-#add-apt-repository --yes ppa:chris-lea/node.js
 
 #apt-get --yes update
 
