@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <openidm.version>3.1.0-SNAPSHOT</openidm.version>
+        <openidm.version>3.1.0-RC2-SNAPSHOT</openidm.version>
     </properties>
 
     <repositories>
