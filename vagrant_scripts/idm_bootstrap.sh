@@ -6,9 +6,9 @@ echo "192.168.50.4 OPENIDM_REPO_HOST" >> /etc/hosts
 
 echo "export OPENIDM_OPTS=\"${OPENIDM_OPTS}\"" >> /etc/profile
 
-## Uncomment the following lines to install Oracle JDK instead of openjdk
-#apt-get --yes update
+apt-get --yes update
 
+## Uncomment the following lines to install Oracle JDK instead of openjdk
 #apt-get --yes --force-yes install python-software-properties
 #add-apt-repository --yes ppa:webupd8team/java
 
