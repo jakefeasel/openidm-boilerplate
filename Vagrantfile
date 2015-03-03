@@ -6,6 +6,10 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+  end
+
   config.vm.define "postgresql93" do |postgresql93|
     postgresql93.vm.provision :shell, :path => "vagrant_scripts/pg93_bootstrap.sh"
     postgresql93.vm.network "private_network", ip: "192.168.50.4"
